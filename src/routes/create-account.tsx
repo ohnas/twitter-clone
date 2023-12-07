@@ -69,7 +69,6 @@ export default function CreateAccount() {
         try {
             setLoading(true);
             const credentials = await createUserWithEmailAndPassword(auth, email, password);
-            console.log(credentials.user);
             await updateProfile(credentials.user, {
                 displayName: name,
             });
